@@ -1,9 +1,8 @@
 *
-
 !*/
-!Parrot/*
+
+!/Parrot/src/**
+
 !.gitignore
 !pom.xml
 !README.md
-
-*.iml
