@@ -1,4 +1,4 @@
-Parrot Refactoring Kata Java version
+# Parrot Refactoring Kata Java version
 ====================================
 
 Parrot Refactoring Kata.
@@ -14,3 +14,6 @@ The project uses:
 ## Acknowlegements
 This code is heavily inspired by one of the examples in Martin Fowler's book "Refactoring".
 It's a classic, and if it's not on your bookshelf already I suggest you treat yourself to a copy!
+
+## Forked
+https://github.com/emilybache/Parrot-Refactoring-Kata

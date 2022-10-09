@@ -6,12 +6,13 @@
 
     <groupId>com.andreasekman</groupId>
     <artifactId>katas</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0-SNAPSHOT</version>
 
     <packaging>pom</packaging>
 
     <modules>
         <module>Parrot</module>
+        <module>GildedRose</module>
     </modules>
 
     <dependencies>
