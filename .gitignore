@@ -3,7 +3,7 @@
 
 !/Parrot/src/**
 !/GildedRose/src/**
-!/
+!/AcronymGenerator/src/**
 
 !.gitignore
 !pom.xml
