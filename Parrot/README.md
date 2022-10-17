@@ -1,4 +1,4 @@
-# Parrot Refactoring Kata Java version
+# Parrot Refactoring Kata Java
 ====================================
 
 ## Parrot Refactoring Kata
