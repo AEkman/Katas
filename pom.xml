@@ -13,6 +13,7 @@
     <modules>
         <module>Parrot</module>
         <module>AcronymGenerator</module>
+        <module>EntranceFeeCalculator</module>
         <!--        <module>GildedRose</module>-->
     </modules>
 

@@ -4,6 +4,7 @@
 !/Parrot/src/**
 !/GildedRose/src/**
 !/AcronymGenerator/src/**
+!/EntranceFeeCalculator/src/**
 
 !.gitignore
 !pom.xml
