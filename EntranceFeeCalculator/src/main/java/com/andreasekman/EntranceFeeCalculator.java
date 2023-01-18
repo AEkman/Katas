@@ -1,28 +1,24 @@
 package com.andreasekman;
 
+import java.util.List;
+import java.util.Optional;
+
 public class EntranceFeeCalculator {
 
-    private static final double CHILD_PRICE_BASE = 100;
-    private static final double ADULT_PRICE_BASE = 100;
+    private static final List<FeeStrategy> feeStrategies = List.of(
+            new AdultFeeCalculator(),
+            new ChildFeeCalculator()
+    );
 
     public static double calculate(Visitor visitor, TicketType ticketType) {
-        double fee = 0;
+        Optional<FeeStrategy> strategy = feeStrategies.stream()
+                                                      .filter(feeStrategy -> feeStrategy.accepts(visitor))
+                                                      .reduce((feeStrategy, feeStrategy2) -> {
+                                                          throw new IllegalStateException("There should only be one");
+                                                      });
 
-        // Calculate price for adults
-        if (visitor.age() > 14 && TicketType.HALF_DAY == ticketType) {
-            fee = ADULT_PRICE_BASE * 0.6;
-        } else if (visitor.age() > 14 && TicketType.FULL_DAY == ticketType) {
-            fee = ADULT_PRICE_BASE * 1.2;
-        }
-
-        // Calculate price for children
-        if (visitor.age() <= 14 && TicketType.HALF_DAY == ticketType) {
-            fee = CHILD_PRICE_BASE * 0.2;
-        } else if (visitor.age() <= 14 && TicketType.FULL_DAY == ticketType) {
-            fee = CHILD_PRICE_BASE * 0.5;
-        }
-
-        return fee;
+        return strategy.orElseThrow(IllegalAccessError::new)
+                       .calculate(ticketType);
     }
 
 }
